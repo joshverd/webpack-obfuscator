@@ -1,16 +1,13 @@
 language: node_js
 node_js:
-  - "10"
-  - "12"
-  - "stable"
+  - "8"
 
 before_script:
   - npm run setup
   - npm run build
 
 script:
-  - npm run test:plugin
-  - npm run test:loader
+  - npm run test
 
 after_success:
   - git config --global user.email "travis@travis-ci.org"
